@@ -1,20 +1,20 @@
 # Get base url
 
-Get the base url (domain with protocol).
-
-> Please not that Get base url is currently under development and not yet suited for production
+Get the base url (domain with protocol) of an string or the current one.
 
 ## Example
-
-
 
 ```js
 import getBaseUrl from "get-base-url"
 
-getBaseUrl()
+getBaseUrl("https://maps.google.com/sub/sub2")   // https://maps.google.com
+
+getBaseUrl("maps.google.com/sub/sub2")           // maps.google.com
+
+getBaseUrl("google.com")                         // google.com
+
+getBaseUrl()                                     // The current url if in a browser
 ```
-
-
 
 ## Conribute
 
