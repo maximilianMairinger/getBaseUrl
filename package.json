@@ -15,7 +15,12 @@
     "url": "git+https://github.com/maximilianMairinger/getBaseUrl.git"
   },
   "keywords": [
-    "baseurlgetdomainprotocol"
+    "base",
+    "url",
+    "get",
+    "domain",
+    "protocol",
+    "baseurl"
   ],
   "author": "Maximilian Mairinger",
   "license": "ISC",
