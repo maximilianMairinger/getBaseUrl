@@ -1,0 +1,4 @@
+import getBaseUrl from "./../../app/src/getBaseUrl"
+//const testElem = document.querySelector("#test")
+
+getBaseUrl()

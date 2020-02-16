@@ -1,0 +1,42 @@
+{
+  "name": "get-base-url",
+  "version": "0.0.1",
+  "description": "Get the base url (domain with protocol).",
+  "main": "app/dist/getBaseUrl.js",
+  "types": "app/dist/getBaseUrl.d.ts",
+  "scripts": {
+    "build": "tsc -p ./tsconfig.prod.json",
+    "dev": "webpack --config webpack.dev.config.js",
+    "deploy": "npm run build && npm publish",
+    "test": "node ./test/dist/test-bundle"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maximilianMairinger/getBaseUrl.git"
+  },
+  "keywords": [
+    "baseurlgetdomainprotocol"
+  ],
+  "author": "Maximilian Mairinger",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/maximilianMairinger/getBaseUrl/issues"
+  },
+  "homepage": "https://github.com/maximilianMairinger/getBaseUrl#readme",
+  "devDependencies": {
+    "@types/node": "^12.6.9",
+    "@types/tween.js": "^17.2.0",
+    "css-loader": "^2.1.0",
+    "cssnano": "^4.1.8",
+    "postcss-loader": "^3.0.0",
+    "terser-webpack-plugin": "^1.2.2",
+    "to-string-loader": "^1.1.6",
+    "ts-loader": "^5.3.3",
+    "typescript": "^3.5.2",
+    "url-loader": "^1.1.2",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10",
+    "webpack-inject-plugin": "^1.5.2",
+    "webpack-merge": "^4.2.2"
+  }
+}
