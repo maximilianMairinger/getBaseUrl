@@ -1,5 +1,7 @@
+import { isBrowser } from "browser-or-node"
+
 export function getBaseUrl(url?: string) {
-  if (url === undefined) return window.location.origin
+  if (url === undefined) return isBrowser ? window.location.origin : ""
 
   const urlAsArray = url.split('/');
   const doubleSlashIndex = url.indexOf("://")

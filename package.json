@@ -29,6 +29,7 @@
   },
   "homepage": "https://github.com/maximilianMairinger/getBaseUrl#readme",
   "devDependencies": {
+    "@types/browser-or-node": "^1.2.0",
     "@types/node": "^12.6.9",
     "@types/tween.js": "^17.2.0",
     "css-loader": "^2.1.0",
@@ -43,5 +44,8 @@
     "webpack-cli": "^3.3.10",
     "webpack-inject-plugin": "^1.5.2",
     "webpack-merge": "^4.2.2"
+  },
+  "dependencies": {
+    "browser-or-node": "^1.2.1"
   }
 }
