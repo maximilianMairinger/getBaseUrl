@@ -7,7 +7,8 @@ export function getBaseUrl(url?: string) {
   const doubleSlashIndex = url.indexOf("://")
   if (doubleSlashIndex !== -1 && doubleSlashIndex === url.indexOf("/")-1) urlAsArray.length = 3
   else {
-    if (url.includes(".")) {
+    let pointIndex = url.indexOf(".")
+    if (pointIndex !== -1 && pointIndex !== 0) {
       urlAsArray.length = 1
       urlAsArray.splice(0, 0, "https:", "")
     }
