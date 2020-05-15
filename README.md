@@ -9,11 +9,15 @@ import getBaseUrl from "get-base-url"
 
 getBaseUrl("https://maps.google.com/sub/sub2")   // https://maps.google.com
 
-getBaseUrl("maps.google.com/sub/sub2")           // maps.google.com
+getBaseUrl("maps.google.com/sub/sub2")           // https://maps.google.com
 
-getBaseUrl("google.com")                         // google.com
+getBaseUrl("google.com")                         // https://google.com
 
 getBaseUrl()                                     // The current url if in a browser
+
+getBaseUrl("relative")                           // The current url if in a browser
+
+getBaseUrl("./relative")                         // The current url if in a browser
 ```
 
 ## Conribute
