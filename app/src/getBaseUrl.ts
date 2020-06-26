@@ -1,24 +1,32 @@
 import { isBrowser } from "browser-or-node"
 
-export function getBaseUrl(url?: string) {
-  if (url === undefined) return isBrowser ? window.location.origin : "/"
+const dir = "/"
+const localHost = "127.0.0.1/"
+
+
+export function getBaseUrl(url?: string, prefix?: string) {
+  if (url === undefined) return isBrowser ? (prefix !== undefined ? window.location.origin.replace(/http:\/\/|https:\/\//, prefix) : window.location.origin) + dir : (prefix !== undefined ? prefix : "http://") + localHost
   
-  const urlAsArray = url.split('/');
+  const urlAsArray = url.split(dir);
   const doubleSlashIndex = url.indexOf("://")
-  if (doubleSlashIndex !== -1 && doubleSlashIndex === url.indexOf("/")-1) urlAsArray.length = 3
+  if (doubleSlashIndex !== -1 && doubleSlashIndex === url.indexOf(dir)-1) {
+    urlAsArray.length = 3
+    let url = urlAsArray.join(dir)
+    if (prefix !== undefined) url = url.replace(/http:\/\/|https:\/\//, prefix)
+  }
   else {
     let pointIndex = url.indexOf(".")
     if (pointIndex !== -1 && pointIndex !== 0) {
-      urlAsArray.length = 1
-      urlAsArray.splice(0, 0, "https:", "")
+      return (prefix !== undefined ? prefix : "https://") + urlAsArray[0]
     }
     else {
-      return isBrowser ? window.location.origin : "/"
+      if (isBrowser) {
+        if (prefix !== undefined) return window.location.origin.replace(/http:\/\/|https:\/\//, prefix) + dir
+        else return window.location.origin + dir
+      }
+      else return localHost
     }
   }
-  return urlAsArray.join("/")
 }
 
 export default getBaseUrl
-
-window.location
