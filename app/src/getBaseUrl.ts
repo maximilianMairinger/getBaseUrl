@@ -13,6 +13,7 @@ export function getBaseUrl(url?: string, prefix?: string) {
     urlAsArray.length = 3
     let url = urlAsArray.join(dir)
     if (prefix !== undefined) url = url.replace(/http:\/\/|https:\/\//, prefix)
+    return url
   }
   else {
     let pointIndex = url.indexOf(".")
