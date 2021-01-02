@@ -1,6 +1,6 @@
 {
   "name": "get-base-url",
-  "version": "2.1.8",
+  "version": "2.1.9",
   "description": "Get the base url (domain with protocol).",
   "main": "app/dist/getBaseUrl.js",
   "types": "app/dist/getBaseUrl.d.ts",
