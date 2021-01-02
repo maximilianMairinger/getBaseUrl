@@ -5,10 +5,10 @@
   "main": "app/dist/cjs/getBaseUrl.js",
   "exports": {
     "node": {
-      "import": "app/dist/mjs/getBaseUrl.js",
-      "require": "app/dist/cjs/getBaseUrl.js"
+      "import": "./app/dist/mjs/getBaseUrl.js",
+      "require": "./app/dist/cjs/getBaseUrl.js"
     },
-    "default": "app/dist/cjs/getBaseUrl.js"
+    "default": "./app/dist/cjs/getBaseUrl.js"
   },
   "types": "app/dist/mjs/getBaseUrl.d.ts",
   "scripts": {
