@@ -1,6 +1,6 @@
 {
   "name": "get-base-url",
-  "version": "2.1.7",
+  "version": "2.1.8",
   "description": "Get the base url (domain with protocol).",
   "main": "./app/dist/mjs/getBaseUrl.js",
   "exports": {
