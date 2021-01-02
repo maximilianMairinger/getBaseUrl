@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "outDir": "./app/dist/cjs",
+    "module": "CommonJS",
+    "target": "es6",
+    "allowSyntheticDefaultImports": true,
+    "declaration": true
+  },
+  "include": [
+    "app/src"
+  ],
+  "exclude": [
+    "./test",
+    "./app/dist"
+  ]
+}
