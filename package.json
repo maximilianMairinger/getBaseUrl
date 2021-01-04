@@ -1,6 +1,6 @@
 {
   "name": "get-base-url",
-  "version": "2.1.9",
+  "version": "2.1.10",
   "description": "Get the base url (domain with protocol).",
   "main": "./app/dist/esm/getBaseUrl.js",
   "exports": {
