@@ -6,6 +6,7 @@ Get the base url (domain with protocol) of an string or the current one.
 
 ```js
 import getBaseUrl from "get-base-url"
+const getBaseUrl = require("get-base-url").default
 
 getBaseUrl("https://maps.google.com/sub/sub2")   // https://maps.google.com
 
@@ -20,6 +21,6 @@ getBaseUrl("relative")                           // The current url if in a brow
 getBaseUrl("./relative")                         // The current url if in a browser
 ```
 
-## Conribute
+## Contribute
 
 All feedback is appreciated. Create a pull request or write an issue.
