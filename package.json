@@ -2,10 +2,17 @@
   "name": "get-base-url",
   "version": "2.1.9",
   "description": "Get the base url (domain with protocol).",
-  "main": "app/dist/getBaseUrl.js",
-  "types": "app/dist/getBaseUrl.d.ts",
+  "main": "./app/dist/mjs/getBaseUrl.js",
+  "exports": {
+    "node": {
+      "import": "./app/dist/mjs/getBaseUrl.js",
+      "require": "./app/dist/cjs/getBaseUrl.js"
+    },
+    "default": "./app/dist/mjs/getBaseUrl.js"
+  },
+  "types": "./app/dist/mjs/getBaseUrl.d.ts",
   "scripts": {
-    "build": "tsc -p ./tsconfig.prod.json",
+    "build": "tsc -p ./tsconfig.cjs.prod.json && tsc -p ./tsconfig.esm.prod.json",
     "dev": "webpack --config webpack.dev.config.js",
     "deploy": "npm run build && npm publish",
     "test": "node ./test/dist/test-bundle"
