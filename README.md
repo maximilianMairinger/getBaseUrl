@@ -6,7 +6,7 @@ Get the base url (domain with protocol) of an string or the current one.
 
 ```js
 import getBaseUrl from "get-base-url"
-const getBaseUrl = require("get-base-url").default
+const { getBaseUrl } = require("get-base-url")
 
 getBaseUrl("https://maps.google.com/sub/sub2")   // https://maps.google.com
 
