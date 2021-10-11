@@ -41,6 +41,7 @@
     "@types/tween.js": "^17.2.0",
     "css-loader": "^2.1.0",
     "cssnano": "^4.1.8",
+    "express": "^4.17.1",
     "postcss-loader": "^3.0.0",
     "terser-webpack-plugin": "^1.2.2",
     "to-string-loader": "^1.1.6",
