@@ -5,9 +5,7 @@ const point = "."
 const localHost = "127.0.0.1"
 
 
-export function getBaseUrl(url?: string) {
-  if (url === undefined) return currentUrl()
-  
+export function getBaseUrl(url: string = "") {
   const urlAsArray = url.split(dir);
   const doubleSlashIndex = url.indexOf("://")
   if (doubleSlashIndex !== -1 && doubleSlashIndex === url.indexOf(dir)-1) {
@@ -19,13 +17,8 @@ export function getBaseUrl(url?: string) {
     if ((firstSlashIndex === -1 && firstPointIndex > 0 && firstPointIndex !== url.length-1) || (firstPointIndex < firstSlashIndex && !(url.startsWith(point) || url.startsWith(dir)))) {
       return urlAsArray[0]
     }
-    else return currentUrl()
+    else return isBrowser ? window.location.host : localHost
   }
-}
-
-function currentUrl() {
-  if (isBrowser) return window.location.host
-  else return localHost
 }
 
 export default getBaseUrl
