@@ -1,6 +1,6 @@
 {
   "name": "get-base-url",
-  "version": "2.2.0",
+  "version": "3.0.0",
   "description": "Get the host of an arbetrary url.",
   "main": "./app/dist/esm/getBaseUrl.js",
   "exports": {
