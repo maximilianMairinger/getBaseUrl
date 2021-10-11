@@ -1,24 +1,35 @@
 # Get base url
 
-Get the base url (domain with protocol) of an string or the current one.
+Get the host of an arbitrary url - relative or absulute or static. Suited for comparison with `location.host` to inquire whether an url is in local domain scope.
 
-## Example
+## Usage
 
 ```js
 import getBaseUrl from "get-base-url"
 const { getBaseUrl } = require("get-base-url")
 
-getBaseUrl("https://maps.google.com/sub/sub2")   // https://maps.google.com
+getBaseUrl("https://maps.google.com/sub/")   // maps.google.com
+getBaseUrl("maps.google.com/sub")            // maps.google.com
+getBaseUrl("google.com")                     // google.com
+getBaseUrl()                                 // The current host if in a browser or localhost of in node
+getBaseUrl("relative")                       // The current host if in a browser or localhost of in node
+getBaseUrl("./relative")                     // The current host if in a browser or localhost of in node
+getBaseUrl("/absolute")                      // The current host if in a browser or localhost of in node
+```
 
-getBaseUrl("maps.google.com/sub/sub2")           // https://maps.google.com
+### Compare whether arbitrary url is in local domain scope
 
-getBaseUrl("google.com")                         // https://google.com
+```js
+import getBaseUrl from "get-base-url"
+const { getBaseUrl } = require("get-base-url")
 
-getBaseUrl()                                     // The current url if in a browser
+function isLocalUrl(url) {
+  return getBaseUrl(url) === getBaseUrl()
+}
 
-getBaseUrl("relative")                           // The current url if in a browser
-
-getBaseUrl("./relative")                         // The current url if in a browser
+isLocalUrl("sub")           // true
+isLocalUrl("google.com")    // false
+isLocalUrl("/google.com")   // true
 ```
 
 ## Contribute

@@ -1,7 +1,7 @@
 {
   "name": "get-base-url",
   "version": "2.2.0",
-  "description": "Get the base url (domain with protocol).",
+  "description": "Get the host of an arbetrary url.",
   "main": "./app/dist/esm/getBaseUrl.js",
   "exports": {
     "node": {
