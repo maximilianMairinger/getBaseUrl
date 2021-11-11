@@ -12,9 +12,12 @@ export function getBaseUrl(url: string = "") {
     return urlAsArray[2]
   }
   else {
-    const firstPointIndex = url.indexOf(point)
-    const firstSlashIndex = url.indexOf(dir)
-    if ((firstSlashIndex === -1 && firstPointIndex > 0 && firstPointIndex !== url.length-1) || (firstPointIndex < firstSlashIndex && !(url.startsWith(point) || url.startsWith(dir)))) {
+    let firstPointIndex = url.indexOf(point)
+    if (firstPointIndex === -1) firstPointIndex = NaN
+    let firstSlashIndex = url.indexOf(dir)
+    if (firstSlashIndex === -1) firstSlashIndex = NaN
+
+    if ((isNaN(firstSlashIndex) && firstPointIndex > 0 && firstPointIndex !== url.length-1) || (firstPointIndex < firstSlashIndex && !(url.startsWith(point) || url.startsWith(dir)))) {
       return urlAsArray[0]
     }
     else return isBrowser ? window.location.host : localHost
