@@ -1,5 +1,7 @@
 # Get base url
 
+> Deprecated: This library was created due to me being unaware of the existence of the [WHATWG URL API](https://nodejs.org/dist/latest-v8.x/docs/api/url.html#url_the_whatwg_url_api). As it is widely supported in both browsers and node and probably more accurate, I see no need for this anymore.
+
 Get the host of an arbitrary url - relative or absulute or static. Suited for comparison with `location.host` to inquire whether an url is in local domain scope.
 
 ## Usage
@@ -31,7 +33,3 @@ isLocalUrl("sub")           // true
 isLocalUrl("google.com")    // false
 isLocalUrl("/google.com")   // true
 ```
-
-## Contribute
-
-All feedback is appreciated. Create a pull request or write an issue.
